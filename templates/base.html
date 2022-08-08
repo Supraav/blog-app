@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <title>Blog</title>
+  </head>
+  <body>
+      <header class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark shadow">
+          <div class="container">
+            <a class="navbar-brand mr-4 text-white" href="{% url 'home' %}">Blog</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"  aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="navbar-nav mr-auto">
+                    <a class="nav-item nav-link text-white" href="#">Home</a>
+                    <a class="nav-item nav-link text-white" href="#">About</a>
+                </div>
+
+                <div class="navbar-nav mr-4">
+                    <a class="nav-item nav-link text-white btn btn-success m-2" href="#">Login</a>
+                    <a class="nav-item nav-link text-white btn btn-info m-2" href="#">Register</a>
+                </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+    {% block content %} {% endblock content %}
+
+    <footer class="bg-dark mt-5 p-2 ">
+        <p class="text-center text-white">All rights reserved</p>
+    </footer>
+
+  </body>
+</html>
