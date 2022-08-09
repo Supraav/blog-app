@@ -1,0 +1,18 @@
+{% load static %}
+{% for post in posts %}
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" 
+      src="{% if post.image %}
+        {{post.image.url}}
+      {% else %}
+        {% static 'images/blog.jpg' %}
+      {% endif %}"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{post.title}}</h5>
+      <p class="card-text">{{post.description}}</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+{% endfor %}

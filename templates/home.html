@@ -1,15 +1,20 @@
 {% extends 'base.html' %}
+
 {% block content %}
 <h1 class="text-center mt-2">home page</h1>
 
-{% if posts %}
-    {% for p in posts %}
-        {% include 'card.html' %}
-    {% endfor %}
+<div class="container main-part">
 
-{% else %} 
-  <!-- <p class="d-block font-weight-light my-2 heading">no contacts</p> -->
-  {% include 'cards.html' %}
-{% endif %}
+{% if posts %}
+  {% for post in posts %}
+    {% include 'partials/cards.html' %}
+  {% endfor %}
+
+{% else %}
+  <div class="bg-dark">
+    <p class="d-block text-white my-2 heading text-center">no contacts</p>
+  </div>
+  {% endif %}
+</div>
 
 {% endblock content %}
